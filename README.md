@@ -1,13 +1,13 @@
-# Deploying a Kubernetes Cluster on AWS with terraform eks provider.
+# Deploying a Kubernetes Cluster on AWS with terraform eks provider.
 
-## Prerequisites
+## Prerequisites
 
 - AWS account
 - AWS CLI
 - Terraform
 - kubectl
 
-## Steps
+## Steps
 
 1. Create an IAM user with programmatic access and AdministratorAccess policy attached.
 2. Configure AWS CLI with the credentials of the user created in the previous step.
@@ -18,7 +18,7 @@
 7. Run `aws eks update-kubeconfig --name midas-cluster  --profile <profile_name>` to configure kubectl to use the cluster.
 8. Check the `project` namespace since deployments are created in that namespace.
 
-## predefined ip
+## Predefined ip
 
 cluster is behinda a nat gateway. and you can see the ip of it in the outputs of the terraform apply or you can run `terraform output nat_gateway_ip` to see the ip of the nat gateway.
 
